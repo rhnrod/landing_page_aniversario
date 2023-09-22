@@ -1,0 +1,85 @@
+@use 'variables';
+
+@mixin title() {
+    font-family: variables.$title;
+    font-size: 36px;
+    text-shadow: 1px 1px 1px variables.$textColor2;
+}
+
+@mixin text() {
+    text-shadow: 1px 1px 1px variables.$textColor2;
+    font-size: 20px;
+}
+
+@mixin form() {
+    &__text{
+        &__title{
+            @include title();
+        }
+
+        &__info {
+            @include text();
+        }
+    }
+}
+
+.food {
+    background-image: linear-gradient(variables.$spaceBlue, variables.$darkerBlue);
+    @include form();
+}
+
+.music {
+    background-image: linear-gradient(variables.$darkerBlue, variables.$darkBlue);
+    @include form();
+}
+
+.sitdown {
+    background-image: linear-gradient(variables.$darkBlue, variables.$blue);
+    @include form();
+}
+
+.new-friends {
+    background-image: linear-gradient(variables.$blue, variables.$lightBlue);
+    @include form();
+    
+    &__image {
+        max-width: 200px;
+    }
+}
+
+.rock-n-roll {
+    background-image: linear-gradient(variables.$lightBlue, variables.$lighterBlue);
+    @include form();
+
+    &__image {
+        max-width: 200px;
+    }
+}
+
+.easteregg {
+    background-color: variables.$grass;
+    background-image: url(../images/monument.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 130vh;
+    
+    &__slug {
+        max-width: 50px;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+    }
+
+    @media (max-width: 1024px) {
+        height: 90vh;
+    }
+
+    @media (max-width: 768px) {
+        height: 60vh;
+    }
+
+    @media (max-width: 425) {
+        height: 40vh;
+    }
+}

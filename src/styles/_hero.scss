@@ -1,0 +1,88 @@
+@use 'variables';
+
+.hero {
+    background-color: variables.$spaceBlue;
+
+    &__image {
+        max-width: 360px;
+
+        &--finn {
+                background-image: url("../images/decalc__finn_the_human.webp");
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+        }
+
+        &--ice-king {
+            background-image: url("../images/decalc__ice_king.webp");
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+    }
+    }
+
+    &__title {
+        font-family: variables.$title;
+        text-shadow: 6px 6px 2px variables.$textColor2;
+        font-size: 60px;
+        text-align: center;
+
+        @media (max-width: 640px) {
+            font-size: 40px;
+        }
+
+        span {
+            font-family: variables.$title;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 20px;
+        padding: 24px 0;
+        gap: 40px;
+
+
+        @media (max-width: 1280px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: variables.$textColor2;
+            gap: 24px;
+
+            @media (max-width: 640px) {
+                display: block;
+            }
+
+
+            &__item {
+                color: variables.$textColor2;
+                background-color: variables.$textColor;
+                border: 3px solid variables.$textColor2;
+                padding: 18px;
+
+                h2 {
+                    color: variables.$textColor2;
+                }
+
+                @media (max-width: 640px) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+    }
+
+}

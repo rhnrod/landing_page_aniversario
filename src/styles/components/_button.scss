@@ -1,0 +1,43 @@
+@use '../variables';
+
+.button {
+        background-color: variables.$primary;
+        padding: 12px 20px;
+        min-width: 350px;
+        min-height: 150px;
+        white-space: nowrap;
+        align-self: center;
+        text-decoration: none;
+        border-radius: 8px;
+        border: 3px solid variables.$textColor2;
+        transition: width ease 4s;
+        transition: height ease 4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        span {
+                color: variables.$textColor;
+                font-family: 'Skranji', sans-serif;
+                text-shadow: 3px 2px 2px variables.$textColor2;
+                transition: all ease 1s;
+                font-size: 32px;
+                width: 310px;
+        }
+
+        img {
+                max-width: 100px;
+                transition: all ease 1s;
+                border-radius: 50%;
+                opacity: 0;
+                z-index: 1;
+                position: absolute;
+        }
+}
+
+.hidden {
+        transition: all ease 1s;
+        visibility: hidden;
+        display: none;
+}

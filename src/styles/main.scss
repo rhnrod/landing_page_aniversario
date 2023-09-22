@@ -1,0 +1,50 @@
+@use 'variables';
+@use 'hero';
+@use 'goodies';
+@use 'components/button';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: variables.$textColor;
+    list-style-type: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--row {
+        flex-direction: row;
+        gap: 40px;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+        }
+
+    }
+
+    &--row-reverse {
+        flex-direction: row-reverse;
+        gap: 40px;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        width: 90%;
+    }
+
+    @media (max-width: 640px) {
+        width: 80%;
+    }
+
+
+}
