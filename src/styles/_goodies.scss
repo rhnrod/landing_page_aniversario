@@ -8,7 +8,15 @@
 
 @mixin text() {
     text-shadow: 1px 1px 1px variables.$textColor2;
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: justify;
+}
+
+@mixin container()  {
+    .container {
+        min-height: 300px;
+    }
 }
 
 @mixin form() {
@@ -21,6 +29,8 @@
             @include text();
         }
     }
+
+    @include container();
 }
 
 .food {
@@ -72,11 +82,11 @@
     }
 
     @media (max-width: 1024px) {
-        height: 90vh;
+        height: 60vh;
     }
 
     @media (max-width: 768px) {
-        height: 60vh;
+        height: 50vh;
     }
 
     @media (max-width: 425) {

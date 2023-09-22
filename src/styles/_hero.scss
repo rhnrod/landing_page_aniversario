@@ -3,6 +3,11 @@
 .hero {
     background-color: variables.$spaceBlue;
 
+    .container {
+        min-height: 721px;
+        justify-content: space-between;
+    }
+
     &__image {
         max-width: 360px;
 
@@ -18,7 +23,9 @@
             background-repeat: no-repeat;
             width: 200px;
             height: 200px;
-    }
+        }
+
+
     }
 
     &__title {
@@ -75,6 +82,19 @@
 
                 h2 {
                     color: variables.$textColor2;
+                }
+
+                &--giftlist {
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: variables.$gift;
+                        color: variables.$textColor;
+
+                        h2 {
+                            color: variables.$textColor;
+                        }
+                    }
                 }
 
                 @media (max-width: 640px) {

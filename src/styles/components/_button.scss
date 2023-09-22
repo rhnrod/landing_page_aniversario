@@ -19,11 +19,19 @@
 
         span {
                 color: variables.$textColor;
+                text-align: center;
                 font-family: 'Skranji', sans-serif;
                 text-shadow: 3px 2px 2px variables.$textColor2;
                 transition: all ease 1s;
                 font-size: 32px;
-                width: 310px;
+
+                @media (max-width:1024px) {
+                        font-size: 56px;
+                }
+
+                @media (max-width:640px) {
+                        font-size: 32px;
+                }
         }
 
         img {
@@ -33,6 +41,10 @@
                 opacity: 0;
                 z-index: 1;
                 position: absolute;
+        }
+
+        @media (max-width:1024px) {
+                width: 100%;
         }
 }
 

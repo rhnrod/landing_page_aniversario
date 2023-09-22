@@ -23,7 +23,7 @@ const countingTime = setInterval(function() {
     const span = document.querySelector('#count');
 
     if (nowTimestamp < eventTimestamp) {
-        span.innerHTML = `começa em ${daysToEvent}d ${hoursToEvent}h ${minutesToEvent}m ${secondsToEvent}s`;
+        span.innerHTML = `começará em ${daysToEvent}d ${hoursToEvent}h ${minutesToEvent}m ${secondsToEvent}s`;
     } else if (nowTimestamp > eventTimestamp && nowTimestamp < eventEndTimestamp) {
         span.innerHTML = 'já tá rolando, parceiro! 🥳';
     } else {
@@ -42,7 +42,8 @@ const button = document.getElementById('button');
 const text = document.getElementById('text');
 const face = document.getElementById('face');
 
-button.addEventListener('click', function() {
+button.addEventListener('click', function(e) {
+    e.preventDefault();
     text.style.opacity = 0; 
     face.classList.remove('hidden');
     
